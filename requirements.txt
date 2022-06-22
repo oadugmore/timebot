@@ -1,0 +1,4 @@
+python-dotenv==0.20.0
+git+https://github.com/Pycord-Development/pycord
+python-dateutil==2.8.2
+tzdata==2022.1
