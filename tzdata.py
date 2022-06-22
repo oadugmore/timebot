@@ -1,5 +1,11 @@
-from datetime import timedelta, timezone
+from datetime import datetime, timedelta, timezone
 import platform
+import pytz
+
+
+# https://stackoverflow.com/a/55735278
+def is_dst():
+    return datetime.now(pytz.timezone('US/Pacific')).dst()
 
 
 TZOFFSETS = {

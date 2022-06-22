@@ -59,7 +59,7 @@ async def translate_time(ctx: discord.ApplicationContext, message: discord.Messa
         parsed_datetime = parse(message.content.upper(),
                                 fuzzy=True, tzinfos=TZOFFSETS)
         if not parsed_datetime.tzinfo:
-            isdst = time.localtime().tm_isdst
+            isdst = is_dst()
             print(
                 f'no timezone detected, sending time zone selector for {ctx.user.name} ({ctx.user.id=}), assuming {isdst=}')
             await ctx.respond(f"I can't tell what time zone {message.author.name} is in.",
