@@ -5,7 +5,7 @@ import pytz
 
 # https://stackoverflow.com/a/55735278
 def is_dst():
-    return datetime.now(pytz.timezone('US/Pacific')).dst()
+    return bool(datetime.now(pytz.timezone('US/Pacific')).dst())
 
 
 TZOFFSETS = {
