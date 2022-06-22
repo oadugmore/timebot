@@ -9,7 +9,9 @@ from tzdata import *
 
 
 load_dotenv()
-bot = discord.Bot(debug_guilds=[987784828512534538])
+bot = discord.Bot(
+    # debug_guilds=[987784828512534538]
+)
 
 
 def generate_response_message(time_orig: datetime, tz_orig: str):
